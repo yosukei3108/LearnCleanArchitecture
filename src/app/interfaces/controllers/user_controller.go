@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"app/domain"
-	"app/interfaces/database"
-	"app/usecase"
+	"github.com/yosukei3108/LearnCleanArchitecture/src/app/domain"
+	"github.com/yosukei3108/LearnCleanArchitecture/src/app/interfaces/database"
+	"github.com/yosukei3108/LearnCleanArchitecture/src/app/usecase"
 	"strconv"
 )
 

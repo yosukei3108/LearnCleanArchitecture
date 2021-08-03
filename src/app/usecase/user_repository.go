@@ -1,6 +1,6 @@
 package usecase
 
-import "app/domain"
+import "github.com/yosukei3108/LearnCleanArchitecture/src/app/domain"
 
 type UserRepository interface {
 	Store(domain.User) (int, error)
