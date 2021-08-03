@@ -1,7 +1,7 @@
 package infrastructure
 
 import (
-	"app/interfaces/controllers"
+	"github.com/yosukei3108/LearnCleanArchitecture/src/app/interfaces/controllers"
 
 	"github.com/gin-gonic/gin"
 )
