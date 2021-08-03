@@ -11,12 +11,12 @@ func (interactor *UserInteractor) Add(u domain.User) (err error) {
 	return
 }
 
-func (interactor *UserInteractor) Users(user domain.Users) (err error) {
+func (interactor *UserInteractor) Users() (user domain.Users, err error) {
 	user, err := interactor.UserRepository.FindAll()
 	return
 }
 
-func (interactor *UserInteractor) UserById(identifier int) (u domain.User) (err error) {
+func (interactor *UserInteractor) UserById(identifier int) (u domain.User, err error) {
 	user, err := interactor.UserRepository.FindById(identifier)
 	return
 }
