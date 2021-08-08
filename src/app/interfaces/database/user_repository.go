@@ -47,7 +47,7 @@ func (repo *UserRepository) FindById(identifier int) (user domain.User, err erro
 }
 
 func (repo *UserRepository) FindAll() (users domain.Users, err error) {
-	rows, err := repo.Query("SELECT * FROM users")
+	rows, err := repo.Query("SELECT id, first_name, last_name FROM users")
 	defer rows.Close()
 	if err != nil {
 		return
