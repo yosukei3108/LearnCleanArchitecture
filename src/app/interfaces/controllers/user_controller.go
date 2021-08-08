@@ -25,14 +25,14 @@ func NewUserController(sqlHandler database.SqlHandler) *UserController {
 func (controller *UserController) Create(c Context) {
 	u := domain.User{}
 	c.Bind(&u)
-	err := controller.Interactor.Add(u)
+	user, err := controller.Interactor.Add(u)
 	if err != nil {
 		c.JSON(500, NewError(err))
 		return
 	}
 
-	//c.JSON(201)
-	c.Status(201)
+	c.JSON(201, user)
+	//c.Status(201)
 }
 
 func (controller *UserController) Index(c Context) {
